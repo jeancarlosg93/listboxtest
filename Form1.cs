@@ -53,22 +53,19 @@ namespace listboxtest
             int index = listBox1.SelectedIndex;
             txtDescription.Text = meals[index].Description;
             lblName.Text = meals[index].Name;
-          //var index=listBox1.Items.IndexOf(sender);
-          //txtDescription.Text= meals[index].Name;
+         
 
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // var index =  comboBox1.Text.ToString();
-
-            //MessageBox.Show(index);
+            
             listBox1.Items.Clear();
             var newitem = comboBox1.SelectedItem;
+
             for (int i = 0 ; i < meals.Count; i++)
             {
                 if (newitem.Equals(meals[i].Type))
                 {
-                   //listBox1.Items.Add(Meals);
                     //meals.Select(a => a.Type == "");
                     listBox1.Items.Add(meals[i].Name);
                 }
