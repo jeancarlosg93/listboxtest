@@ -68,6 +68,7 @@ namespace listboxtest
                 {
                     //meals.Select(a => a.Type == "");
                     listBox1.Items.Add(meals[i].Name);
+                    //
                 }
             }
 
