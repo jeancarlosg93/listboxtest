@@ -38,12 +38,17 @@
             // 
             // listBox1
             // 
+            listBox1.Font = new Font("Segoe UI", 11.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBox1.ForeColor = SystemColors.ActiveCaptionText;
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 30;
+            listBox1.HorizontalScrollbar = true;
+            listBox1.ItemHeight = 36;
             listBox1.Location = new Point(21, 98);
             listBox1.Margin = new Padding(5, 6, 5, 6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(470, 664);
+            listBox1.ScrollAlwaysVisible = true;
+            listBox1.Size = new Size(470, 652);
+            listBox1.Sorted = true;
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -72,7 +77,7 @@
             groupBox1.Controls.Add(lblName);
             groupBox1.Location = new Point(516, 87);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(731, 536);
+            groupBox1.Size = new Size(731, 663);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             // 
@@ -80,10 +85,10 @@
             // 
             txtDescription.BackColor = SystemColors.ButtonFace;
             txtDescription.BorderStyle = BorderStyle.FixedSingle;
-            txtDescription.Location = new Point(23, 104);
+            txtDescription.Location = new Point(23, 82);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(364, 171);
+            txtDescription.Size = new Size(331, 171);
             txtDescription.TabIndex = 3;
             // 
             // Form1
