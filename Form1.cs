@@ -10,53 +10,75 @@ namespace listboxtest
 {
     public partial class Form1 : Form
     {
+        List<Meal> meals = new List<Meal>();
 
         public Form1()
 
         {
             InitializeComponent();
-            using (StreamReader inputfile = new StreamReader(@"C:\Users\jeanc\Downloads\listboxtest\listboxtest\meal.csv"))
+            
+            using (StreamReader inputfile =
+                   new StreamReader(@"C:\Users\jeanc\Downloads\listboxtest\listboxtest\meal.csv"))
             {
                 var config = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
-                    Delimiter = ";", HasHeaderRecord = true,
+                    Delimiter = ";",
+                    HasHeaderRecord = true,
                 };
 
-            using (var csvreader = new CsvReader(inputfile, config))
+                using (var csvreader = new CsvReader(inputfile, config))
                 {
-                   var records = csvreader.GetRecords<Meal>().ToList();
-                   foreach (var record in records)
-                   {
-                       listBox1.Items.Add(record.Name);
+                    meals = csvreader.GetRecords<Meal>().ToList();
+                    foreach (var record in meals)
+                    {
+                        while (!comboBox1.Items.Contains(record.Type))
+                        {
+                            comboBox1.Items.Add(record.Type);
 
-                       while (!comboBox1.Items.Contains(record.Type))
-                       {
-                        comboBox1.Items.Add(record.Type);
-                       }
-                   }
+                        }
+
+                        listBox1.Items.Add(record.Name);
+                     
+                        
+
+                    }
                 }
             }
-
-            
-            
         }
-        
-       
 
-        void Initializecombobox()
-        {
-            
-        }
+        //
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
+        { 
+            int index = listBox1.SelectedIndex;
+            txtDescription.Text = meals[index].Description;
+            lblName.Text = meals[index].Name;
+          //var index=listBox1.Items.IndexOf(sender);
+          //txtDescription.Text= meals[index].Name;
 
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            
+            // var index =  comboBox1.Text.ToString();
+
+            //MessageBox.Show(index);
+            listBox1.Items.Clear();
+            var newitem = comboBox1.SelectedItem;
+            for (int i = 0 ; i < meals.Count; i++)
+            {
+                if (newitem.Equals(meals[i].Type))
+                {
+                    //listBox1.Items.Add(Meals);
+                    //meals.Select(a => a.Type == "");
+                    listBox1.Items.Add(meals[i].Name);
+                }
+            }
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
