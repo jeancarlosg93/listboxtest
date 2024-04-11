@@ -45,9 +45,7 @@ namespace listboxtest
                 }
             }
         }
-
-        //
-
+        
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         { 
             int index = listBox1.SelectedIndex;
@@ -66,9 +64,12 @@ namespace listboxtest
             {
                 if (newitem.Equals(meals[i].Type))
                 {
+                    //this is a shortcut using the "select" method from the "list" class
+                    //it's using linq language to search on the list for all the items
+                    //that contain type =="" 
                     //meals.Select(a => a.Type == "");
                     listBox1.Items.Add(meals[i].Name);
-                    //
+                    
                 }
             }
 
