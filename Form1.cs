@@ -68,7 +68,7 @@ namespace listboxtest
             {
                 if (newitem.Equals(meals[i].Type))
                 {
-                    //listBox1.Items.Add(Meals);
+                   //listBox1.Items.Add(Meals);
                     //meals.Select(a => a.Type == "");
                     listBox1.Items.Add(meals[i].Name);
                 }
