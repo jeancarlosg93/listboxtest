@@ -16,7 +16,7 @@ namespace listboxtest
 
         {
             InitializeComponent();
-            
+            comboBox1.Text = "Showing all options";
             using (StreamReader inputfile =
                    new StreamReader(@"C:\Users\jeanc\Downloads\listboxtest\listboxtest\meal.csv"))
             {
@@ -38,44 +38,54 @@ namespace listboxtest
                         }
 
                         listBox1.Items.Add(record.Name);
-                     
-                        
+
+
 
                     }
                 }
             }
         }
-        
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        { 
-            int index = listBox1.SelectedIndex;
-            txtDescription.Text = meals[index].Description;
-            lblName.Text = meals[index].Name;
-         
-
-        }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            listBox1.Items.Clear();
-            var newitem = comboBox1.SelectedItem;
+            int index = listBox1.SelectedIndex;
+            var newitem = listBox1.SelectedItem;
 
-            for (int i = 0 ; i < meals.Count; i++)
+            for (int i = 0; i < meals.Count; i++)
             {
-                if (newitem.Equals(meals[i].Type))
+                if (newitem.Equals(meals[i].Name))
                 {
-                    //this is a shortcut using the "select" method from the "list" class
-                    //it's using linq language to search on the list for all the items
-                    //that contain type =="" 
-                    //meals.Select(a => a.Type == "");
-                    listBox1.Items.Add(meals[i].Name);
-                    
+                    txtDescription.Text = meals[i].Description;
+                    lblName.Text = meals[i].Name;
                 }
             }
 
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+            private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+            {
+
+                listBox1.Items.Clear();
+                var newitem = comboBox1.SelectedItem;
+
+                for (int i = 0; i < meals.Count; i++)
+                {
+                    if (newitem.Equals(meals[i].Type))
+                    {
+                        //this is a shortcut using the "select" method from the "list" class
+                        //it's using linq language to search on the list for all the items
+                        //that contain type =="" 
+                        //meals.Select(a => a.Type == "");
+                        listBox1.Items.Add(meals[i].Name);
+
+                    }
+                }
+
+            }
+        
+    
+
+    private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
