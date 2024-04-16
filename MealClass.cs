@@ -31,6 +31,5 @@ namespace listboxtest
         [Name("Ingredient9")] public string Ingredient9 { get; set; }
         [Name("Image")] public string Image { get; set; }
 
-      
     }
 }
