@@ -78,7 +78,6 @@ namespace listboxtest
                         listNutritionInfo.Items.Add("Carbs:\t" + meals[i].Carbs);
                         listNutritionInfo.Items.Add("Protein:\t" + meals[i].Protein);
 
-
                     }
                 }
             

@@ -32,12 +32,12 @@
             comboBox1 = new ComboBox();
             lblName = new Label();
             groupBox1 = new GroupBox();
+            listNutritionInfo = new ListBox();
             lblIngredient = new Label();
             pictureBox1 = new PictureBox();
             txtNutritionInfo = new Label();
             listIngredient = new ListBox();
             txtDescription = new TextBox();
-            listNutritionInfo = new ListBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -90,6 +90,19 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             // 
+            // listNutritionInfo
+            // 
+            listNutritionInfo.BackColor = SystemColors.ButtonFace;
+            listNutritionInfo.BorderStyle = BorderStyle.None;
+            listNutritionInfo.Font = new Font("Segoe UI", 11.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listNutritionInfo.ForeColor = SystemColors.ActiveCaptionText;
+            listNutritionInfo.FormattingEnabled = true;
+            listNutritionInfo.ItemHeight = 20;
+            listNutritionInfo.Location = new Point(221, 231);
+            listNutritionInfo.Name = "listNutritionInfo";
+            listNutritionInfo.Size = new Size(168, 260);
+            listNutritionInfo.TabIndex = 10;
+            // 
             // lblIngredient
             // 
             lblIngredient.AutoSize = true;
@@ -105,7 +118,7 @@
             pictureBox1.BackColor = SystemColors.ActiveBorder;
             pictureBox1.Location = new Point(221, 41);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(168, 158);
+            pictureBox1.Size = new Size(158, 158);
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
@@ -144,24 +157,11 @@
             txtDescription.Size = new Size(194, 158);
             txtDescription.TabIndex = 3;
             // 
-            // listNutritionInfo
-            // 
-            listNutritionInfo.BackColor = SystemColors.ButtonFace;
-            listNutritionInfo.BorderStyle = BorderStyle.None;
-            listNutritionInfo.Font = new Font("Segoe UI", 11.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listNutritionInfo.ForeColor = SystemColors.ActiveCaptionText;
-            listNutritionInfo.FormattingEnabled = true;
-            listNutritionInfo.ItemHeight = 20;
-            listNutritionInfo.Location = new Point(221, 231);
-            listNutritionInfo.Name = "listNutritionInfo";
-            listNutritionInfo.Size = new Size(168, 260);
-            listNutritionInfo.TabIndex = 10;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(716, 551);
+            ClientSize = new Size(725, 551);
             Controls.Add(groupBox1);
             Controls.Add(comboBox1);
             Controls.Add(listSelection);
