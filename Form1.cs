@@ -6,6 +6,8 @@ using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
 using System.Linq;
 using System;
+using System.Text;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace listboxtest
 {
@@ -19,13 +21,13 @@ namespace listboxtest
             
             InitializeComponent();
             comboBox1.Text = "Showing all options";
-            using (StreamReader inputfile =
-                   new StreamReader(@"C:\Users\jeanc\Downloads\listboxtest\listboxtest\meal.csv"))
+            using (StreamReader inputfile = new StreamReader(@"C:\\Users\\jeanc\\source\\repos\\listboxtest\\meal.csv"))
             {
                 var config = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
                     Delimiter = ";",
                     HasHeaderRecord = true,
+                    Encoding = Encoding.UTF8,
                 };
 
                 using (var csvreader = new CsvReader(inputfile, config))
@@ -78,6 +80,10 @@ namespace listboxtest
                         listNutritionInfo.Items.Add("Carbs:\t" + meals[i].Carbs);
                         listNutritionInfo.Items.Add("Protein:\t" + meals[i].Protein);
 
+
+                        string path = meals[i].Image;
+                        
+                        pictureBox1.Image=Image.FromFile(path);
 
                     }
                 }
