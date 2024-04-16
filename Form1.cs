@@ -14,14 +14,20 @@ namespace listboxtest
     public partial class Form1 : Form
     {
         List<Meal> meals = new List<Meal>();
-       
+
         public Form1()
 
         {
-            
+
             InitializeComponent();
+            generatecontent();
             comboBox1.Text = "Showing all options";
-            using (StreamReader inputfile = new StreamReader(@"C:\\Users\\jeanc\\source\\repos\\listboxtest\\meal.csv"))
+            
+        }
+
+        private void generatecontent()
+        {
+            using (StreamReader inputfile = new StreamReader(@"meal.csv"))
             {
                 var config = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
@@ -49,14 +55,18 @@ namespace listboxtest
                 }
             }
         }
-        
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             int index = listSelection.SelectedIndex;
-            var newitem = listSelection.SelectedItem;
-            listIngredient.Items.Clear();
-            listNutritionInfo.Items.Clear();
+            if (index != -1)
+            {
+
+                var newitem = listSelection.SelectedItem;
+                listIngredient.Items.Clear();
+                listNutritionInfo.Items.Clear();
+
 
 
                 for (int i = 0; i < meals.Count; i++)
@@ -82,25 +92,23 @@ namespace listboxtest
 
 
                         string path = meals[i].Image;
-                        
-                        pictureBox1.Image=Image.FromFile(path);
+
+                        pictureBox1.Image = Image.FromFile(path);
 
                     }
                 }
-            
-           
+
+            }
+
 
         }
-        
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             listSelection.Items.Clear();
             var newitem = comboBox1.SelectedItem;
-            try
-            {
 
-            
             for (int i = 0; i < meals.Count; i++)
             {
                 if (newitem.Equals(meals[i].Type))
@@ -112,12 +120,7 @@ namespace listboxtest
                     listSelection.Items.Add(meals[i].Name);
                 }
             }
-            }
-            catch (NullReferenceException)
-            {
-                txtDescription.Text = "";
-                throw;
-            }
+
 
         }
 
@@ -131,6 +134,13 @@ namespace listboxtest
         private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnclearfilter_Click(object sender, EventArgs e)
+        {
+            listSelection.Items.Clear();
+            comboBox1.Text = "Showing all options";
+            generatecontent();
         }
     }
 }
