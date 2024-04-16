@@ -100,9 +100,9 @@
             listNutritionInfo.ForeColor = SystemColors.ActiveCaptionText;
             listNutritionInfo.FormattingEnabled = true;
             listNutritionInfo.ItemHeight = 20;
-            listNutritionInfo.Location = new Point(393, 229);
+            listNutritionInfo.Location = new Point(346, 280);
             listNutritionInfo.Name = "listNutritionInfo";
-            listNutritionInfo.Size = new Size(177, 104);
+            listNutritionInfo.Size = new Size(224, 84);
             listNutritionInfo.TabIndex = 10;
             // 
             // lblIngredient
@@ -119,9 +119,9 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ActiveBorder;
-            pictureBox1.Location = new Point(393, 18);
+            pictureBox1.Location = new Point(346, 18);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(177, 177);
+            pictureBox1.Size = new Size(224, 224);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -130,7 +130,7 @@
             // 
             txtNutritionInfo.AutoSize = true;
             txtNutritionInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtNutritionInfo.Location = new Point(393, 205);
+            txtNutritionInfo.Location = new Point(346, 256);
             txtNutritionInfo.Margin = new Padding(2, 0, 2, 0);
             txtNutritionInfo.Name = "txtNutritionInfo";
             txtNutritionInfo.Size = new Size(177, 21);
@@ -147,7 +147,7 @@
             listIngredient.ItemHeight = 20;
             listIngredient.Location = new Point(13, 229);
             listIngredient.Name = "listIngredient";
-            listIngredient.Size = new Size(328, 260);
+            listIngredient.Size = new Size(327, 260);
             listIngredient.TabIndex = 5;
             // 
             // txtDescription
@@ -159,7 +159,7 @@
             txtDescription.Margin = new Padding(2);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(328, 158);
+            txtDescription.Size = new Size(327, 158);
             txtDescription.TabIndex = 3;
             // 
             // btnclearfilter
