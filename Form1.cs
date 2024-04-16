@@ -93,8 +93,8 @@ namespace listboxtest
 
                         string path = meals[i].Image;
 
-                        pictureBox1.Image = Image.FromFile(path);
-
+                        //pictureBox1.Image = Image.FromFile(path);
+                        pictureBox1.Load(path);
                     }
                 }
 
