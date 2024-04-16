@@ -49,19 +49,21 @@
             listSelection.ForeColor = SystemColors.ActiveCaptionText;
             listSelection.FormattingEnabled = true;
             listSelection.HorizontalScrollbar = true;
-            listSelection.ItemHeight = 20;
-            listSelection.Location = new Point(12, 69);
+            listSelection.ItemHeight = 41;
+            listSelection.Location = new Point(22, 147);
+            listSelection.Margin = new Padding(6, 6, 6, 6);
             listSelection.Name = "listSelection";
-            listSelection.Size = new Size(276, 464);
+            listSelection.Size = new Size(509, 947);
             listSelection.TabIndex = 0;
             listSelection.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // comboBox1
             // 
             comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.Location = new Point(12, 20);
+            comboBox1.Location = new Point(22, 43);
+            comboBox1.Margin = new Padding(6, 6, 6, 6);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(195, 29);
+            comboBox1.Size = new Size(359, 53);
             comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -69,10 +71,10 @@
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblName.Location = new Point(13, 18);
-            lblName.Margin = new Padding(2, 0, 2, 0);
+            lblName.Location = new Point(24, 38);
+            lblName.Margin = new Padding(4, 0, 4, 0);
             lblName.Name = "lblName";
-            lblName.Size = new Size(56, 21);
+            lblName.Size = new Size(108, 45);
             lblName.TabIndex = 2;
             lblName.Text = "Name";
             // 
@@ -85,11 +87,11 @@
             groupBox1.Controls.Add(listIngredient);
             groupBox1.Controls.Add(txtDescription);
             groupBox1.Controls.Add(lblName);
-            groupBox1.Location = new Point(301, 11);
-            groupBox1.Margin = new Padding(2);
+            groupBox1.Location = new Point(559, 23);
+            groupBox1.Margin = new Padding(4, 4, 4, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(2);
-            groupBox1.Size = new Size(580, 522);
+            groupBox1.Padding = new Padding(4, 4, 4, 4);
+            groupBox1.Size = new Size(1077, 1114);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             // 
@@ -99,29 +101,31 @@
             listNutritionInfo.Font = new Font("Segoe UI", 11.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listNutritionInfo.ForeColor = SystemColors.ActiveCaptionText;
             listNutritionInfo.FormattingEnabled = true;
-            listNutritionInfo.ItemHeight = 20;
-            listNutritionInfo.Location = new Point(346, 280);
+            listNutritionInfo.ItemHeight = 41;
+            listNutritionInfo.Location = new Point(643, 549);
+            listNutritionInfo.Margin = new Padding(6, 6, 6, 6);
             listNutritionInfo.Name = "listNutritionInfo";
-            listNutritionInfo.Size = new Size(224, 84);
+            listNutritionInfo.Size = new Size(413, 168);
             listNutritionInfo.TabIndex = 10;
             // 
             // lblIngredient
             // 
             lblIngredient.AutoSize = true;
             lblIngredient.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblIngredient.Location = new Point(13, 207);
-            lblIngredient.Margin = new Padding(2, 0, 2, 0);
+            lblIngredient.Location = new Point(24, 442);
+            lblIngredient.Margin = new Padding(4, 0, 4, 0);
             lblIngredient.Name = "lblIngredient";
-            lblIngredient.Size = new Size(97, 21);
+            lblIngredient.Size = new Size(190, 45);
             lblIngredient.TabIndex = 9;
             lblIngredient.Text = "Ingredients";
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ActiveBorder;
-            pictureBox1.Location = new Point(346, 18);
+            pictureBox1.Location = new Point(643, 38);
+            pictureBox1.Margin = new Padding(6, 6, 6, 6);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(224, 224);
+            pictureBox1.Size = new Size(416, 416);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -130,10 +134,10 @@
             // 
             txtNutritionInfo.AutoSize = true;
             txtNutritionInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtNutritionInfo.Location = new Point(346, 256);
-            txtNutritionInfo.Margin = new Padding(2, 0, 2, 0);
+            txtNutritionInfo.Location = new Point(643, 498);
+            txtNutritionInfo.Margin = new Padding(4, 0, 4, 0);
             txtNutritionInfo.Name = "txtNutritionInfo";
-            txtNutritionInfo.Size = new Size(177, 21);
+            txtNutritionInfo.Size = new Size(347, 45);
             txtNutritionInfo.TabIndex = 7;
             txtNutritionInfo.Text = "Nutrition Information";
             // 
@@ -144,10 +148,11 @@
             listIngredient.Font = new Font("Segoe UI", 11.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listIngredient.ForeColor = SystemColors.ActiveCaptionText;
             listIngredient.FormattingEnabled = true;
-            listIngredient.ItemHeight = 20;
-            listIngredient.Location = new Point(13, 229);
+            listIngredient.ItemHeight = 41;
+            listIngredient.Location = new Point(24, 489);
+            listIngredient.Margin = new Padding(6, 6, 6, 6);
             listIngredient.Name = "listIngredient";
-            listIngredient.Size = new Size(327, 260);
+            listIngredient.Size = new Size(607, 533);
             listIngredient.TabIndex = 5;
             // 
             // txtDescription
@@ -155,19 +160,20 @@
             txtDescription.BackColor = SystemColors.ButtonFace;
             txtDescription.BorderStyle = BorderStyle.None;
             txtDescription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDescription.Location = new Point(13, 41);
-            txtDescription.Margin = new Padding(2);
+            txtDescription.Location = new Point(24, 87);
+            txtDescription.Margin = new Padding(4, 4, 4, 4);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(327, 158);
+            txtDescription.Size = new Size(607, 337);
             txtDescription.TabIndex = 3;
             // 
             // btnclearfilter
             // 
             btnclearfilter.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnclearfilter.Location = new Point(213, 20);
+            btnclearfilter.Location = new Point(396, 43);
+            btnclearfilter.Margin = new Padding(6, 6, 6, 6);
             btnclearfilter.Name = "btnclearfilter";
-            btnclearfilter.Size = new Size(75, 30);
+            btnclearfilter.Size = new Size(139, 64);
             btnclearfilter.TabIndex = 5;
             btnclearfilter.Text = "Clear";
             btnclearfilter.UseVisualStyleBackColor = true;
@@ -175,13 +181,14 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(893, 551);
+            ClientSize = new Size(1658, 1175);
             Controls.Add(btnclearfilter);
             Controls.Add(groupBox1);
             Controls.Add(comboBox1);
             Controls.Add(listSelection);
+            Margin = new Padding(6, 6, 6, 6);
             Name = "Form1";
             Text = "Form1";
             groupBox1.ResumeLayout(false);
