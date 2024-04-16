@@ -33,7 +33,6 @@ namespace listboxtest
                 {
                     Delimiter = ";",
                     HasHeaderRecord = true,
-                    Encoding = Encoding.UTF8,
                 };
 
                 using (var csvreader = new CsvReader(inputfile, config))
@@ -75,7 +74,7 @@ namespace listboxtest
                     {
                         lblName.Text = meals[i].Name;
                         txtDescription.Text = meals[i].Description;
-                        listIngredient.Items.Add(meals[i].Ingredient1);
+                        listIngredient.Items.Add(" "+meals[i].Ingredient1);
                         listIngredient.Items.Add(meals[i].Ingredient2);
                         listIngredient.Items.Add(meals[i].Ingredient3);
                         listIngredient.Items.Add(meals[i].Ingredient4);
