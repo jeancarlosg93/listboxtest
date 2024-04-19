@@ -40,6 +40,7 @@
             listBox1 = new ListBox();
             groupBox1 = new GroupBox();
             listNutritionInfo = new ListBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             NameBox.SuspendLayout();
             boxIngredients.SuspendLayout();
@@ -111,6 +112,7 @@
             txtDescription.Margin = new Padding(2);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
+            txtDescription.ReadOnly = true;
             txtDescription.Size = new Size(355, 207);
             txtDescription.TabIndex = 4;
             // 
@@ -186,11 +188,22 @@
             listNutritionInfo.Size = new Size(212, 84);
             listNutritionInfo.TabIndex = 11;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(1055, 689);
+            button1.Name = "button1";
+            button1.Size = new Size(218, 30);
+            button1.TabIndex = 15;
+            button1.Text = "About";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1308, 727);
+            ClientSize = new Size(1284, 727);
+            Controls.Add(button1);
             Controls.Add(groupBox1);
             Controls.Add(boxInstructions);
             Controls.Add(boxIngredients);
@@ -224,5 +237,6 @@
         private GroupBox groupBox1;
         private ListBox listNutritionInfo;
         private TextBox txtDescription;
+        private Button button1;
     }
 }
