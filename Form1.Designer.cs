@@ -30,17 +30,21 @@
         {
             listSelection = new ListBox();
             comboBox1 = new ComboBox();
-            lblName = new Label();
+            pictureBox1 = new PictureBox();
+            btnclearfilter = new Button();
+            NameBox = new GroupBox();
+            txtDescription = new TextBox();
+            boxIngredients = new GroupBox();
+            listIngredient = new ListBox();
+            boxInstructions = new GroupBox();
+            listBox1 = new ListBox();
             groupBox1 = new GroupBox();
             listNutritionInfo = new ListBox();
-            lblIngredient = new Label();
-            pictureBox1 = new PictureBox();
-            txtNutritionInfo = new Label();
-            listIngredient = new ListBox();
-            txtDescription = new TextBox();
-            btnclearfilter = new Button();
-            groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            NameBox.SuspendLayout();
+            boxIngredients.SuspendLayout();
+            boxInstructions.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // listSelection
@@ -52,7 +56,7 @@
             listSelection.ItemHeight = 20;
             listSelection.Location = new Point(12, 69);
             listSelection.Name = "listSelection";
-            listSelection.Size = new Size(276, 464);
+            listSelection.Size = new Size(276, 644);
             listSelection.TabIndex = 0;
             listSelection.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -65,102 +69,15 @@
             comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // lblName
-            // 
-            lblName.AutoSize = true;
-            lblName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblName.Location = new Point(13, 18);
-            lblName.Margin = new Padding(2, 0, 2, 0);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(56, 21);
-            lblName.TabIndex = 2;
-            lblName.Text = "Name";
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(listNutritionInfo);
-            groupBox1.Controls.Add(lblIngredient);
-            groupBox1.Controls.Add(pictureBox1);
-            groupBox1.Controls.Add(txtNutritionInfo);
-            groupBox1.Controls.Add(listIngredient);
-            groupBox1.Controls.Add(txtDescription);
-            groupBox1.Controls.Add(lblName);
-            groupBox1.Location = new Point(301, 11);
-            groupBox1.Margin = new Padding(2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(2);
-            groupBox1.Size = new Size(580, 522);
-            groupBox1.TabIndex = 4;
-            groupBox1.TabStop = false;
-            // 
-            // listNutritionInfo
-            // 
-            listNutritionInfo.BackColor = SystemColors.ButtonFace;
-            listNutritionInfo.Font = new Font("Segoe UI", 11.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listNutritionInfo.ForeColor = SystemColors.ActiveCaptionText;
-            listNutritionInfo.FormattingEnabled = true;
-            listNutritionInfo.ItemHeight = 20;
-            listNutritionInfo.Location = new Point(346, 280);
-            listNutritionInfo.Name = "listNutritionInfo";
-            listNutritionInfo.Size = new Size(224, 84);
-            listNutritionInfo.TabIndex = 10;
-            // 
-            // lblIngredient
-            // 
-            lblIngredient.AutoSize = true;
-            lblIngredient.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblIngredient.Location = new Point(13, 207);
-            lblIngredient.Margin = new Padding(2, 0, 2, 0);
-            lblIngredient.Name = "lblIngredient";
-            lblIngredient.Size = new Size(97, 21);
-            lblIngredient.TabIndex = 9;
-            lblIngredient.Text = "Ingredients";
-            // 
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ActiveBorder;
-            pictureBox1.Location = new Point(346, 18);
+            pictureBox1.Location = new Point(1049, 20);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(224, 224);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
-            // 
-            // txtNutritionInfo
-            // 
-            txtNutritionInfo.AutoSize = true;
-            txtNutritionInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtNutritionInfo.Location = new Point(346, 256);
-            txtNutritionInfo.Margin = new Padding(2, 0, 2, 0);
-            txtNutritionInfo.Name = "txtNutritionInfo";
-            txtNutritionInfo.Size = new Size(177, 21);
-            txtNutritionInfo.TabIndex = 7;
-            txtNutritionInfo.Text = "Nutrition Information";
-            // 
-            // listIngredient
-            // 
-            listIngredient.BackColor = SystemColors.ButtonFace;
-            listIngredient.BorderStyle = BorderStyle.None;
-            listIngredient.Font = new Font("Segoe UI", 11.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listIngredient.ForeColor = SystemColors.ActiveCaptionText;
-            listIngredient.FormattingEnabled = true;
-            listIngredient.ItemHeight = 20;
-            listIngredient.Location = new Point(13, 229);
-            listIngredient.Name = "listIngredient";
-            listIngredient.Size = new Size(327, 260);
-            listIngredient.TabIndex = 5;
-            // 
-            // txtDescription
-            // 
-            txtDescription.BackColor = SystemColors.ButtonFace;
-            txtDescription.BorderStyle = BorderStyle.None;
-            txtDescription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDescription.Location = new Point(13, 41);
-            txtDescription.Margin = new Padding(2);
-            txtDescription.Multiline = true;
-            txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(327, 158);
-            txtDescription.TabIndex = 3;
             // 
             // btnclearfilter
             // 
@@ -173,20 +90,123 @@
             btnclearfilter.UseVisualStyleBackColor = true;
             btnclearfilter.Click += btnclearfilter_Click;
             // 
+            // NameBox
+            // 
+            NameBox.Controls.Add(txtDescription);
+            NameBox.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NameBox.Location = new Point(301, 10);
+            NameBox.Name = "NameBox";
+            NameBox.Size = new Size(368, 246);
+            NameBox.TabIndex = 12;
+            NameBox.TabStop = false;
+            NameBox.Text = "Name";
+            // 
+            // txtDescription
+            // 
+            txtDescription.BackColor = SystemColors.ButtonFace;
+            txtDescription.BorderStyle = BorderStyle.None;
+            txtDescription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDescription.ForeColor = SystemColors.WindowText;
+            txtDescription.Location = new Point(8, 27);
+            txtDescription.Margin = new Padding(2);
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(355, 207);
+            txtDescription.TabIndex = 4;
+            // 
+            // boxIngredients
+            // 
+            boxIngredients.Controls.Add(listIngredient);
+            boxIngredients.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            boxIngredients.Location = new Point(301, 262);
+            boxIngredients.Name = "boxIngredients";
+            boxIngredients.Size = new Size(368, 457);
+            boxIngredients.TabIndex = 13;
+            boxIngredients.TabStop = false;
+            boxIngredients.Text = "Ingredients";
+            // 
+            // listIngredient
+            // 
+            listIngredient.BackColor = SystemColors.ButtonFace;
+            listIngredient.BorderStyle = BorderStyle.None;
+            listIngredient.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listIngredient.ForeColor = SystemColors.ActiveCaptionText;
+            listIngredient.FormattingEnabled = true;
+            listIngredient.ItemHeight = 21;
+            listIngredient.Location = new Point(8, 26);
+            listIngredient.Name = "listIngredient";
+            listIngredient.Size = new Size(346, 420);
+            listIngredient.TabIndex = 6;
+            // 
+            // boxInstructions
+            // 
+            boxInstructions.Controls.Add(listBox1);
+            boxInstructions.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            boxInstructions.Location = new Point(675, 10);
+            boxInstructions.Name = "boxInstructions";
+            boxInstructions.Size = new Size(368, 709);
+            boxInstructions.TabIndex = 13;
+            boxInstructions.TabStop = false;
+            boxInstructions.Text = "Instructions";
+            // 
+            // listBox1
+            // 
+            listBox1.BackColor = SystemColors.ButtonFace;
+            listBox1.BorderStyle = BorderStyle.None;
+            listBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBox1.ForeColor = SystemColors.ActiveCaptionText;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 21;
+            listBox1.Location = new Point(6, 28);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(356, 651);
+            listBox1.TabIndex = 12;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(listNutritionInfo);
+            groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox1.Location = new Point(1049, 262);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(224, 157);
+            groupBox1.TabIndex = 14;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Food Facts";
+            // 
+            // listNutritionInfo
+            // 
+            listNutritionInfo.BackColor = SystemColors.ButtonFace;
+            listNutritionInfo.BorderStyle = BorderStyle.None;
+            listNutritionInfo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listNutritionInfo.ForeColor = SystemColors.ActiveCaptionText;
+            listNutritionInfo.FormattingEnabled = true;
+            listNutritionInfo.ItemHeight = 21;
+            listNutritionInfo.Location = new Point(6, 28);
+            listNutritionInfo.Name = "listNutritionInfo";
+            listNutritionInfo.Size = new Size(212, 84);
+            listNutritionInfo.TabIndex = 11;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(893, 551);
-            Controls.Add(btnclearfilter);
+            ClientSize = new Size(1308, 727);
             Controls.Add(groupBox1);
+            Controls.Add(boxInstructions);
+            Controls.Add(boxIngredients);
+            Controls.Add(btnclearfilter);
             Controls.Add(comboBox1);
             Controls.Add(listSelection);
+            Controls.Add(pictureBox1);
+            Controls.Add(NameBox);
             Name = "Form1";
             Text = "Form1";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            NameBox.ResumeLayout(false);
+            NameBox.PerformLayout();
+            boxIngredients.ResumeLayout(false);
+            boxInstructions.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -194,14 +214,15 @@
 
         private ListBox listSelection;
         private ComboBox comboBox1;
-        private Label lblName;
-        private GroupBox groupBox1;
-        private TextBox txtDescription;
-        private ListBox listIngredient;
-        private Label txtNutritionInfo;
         private PictureBox pictureBox1;
-        private Label lblIngredient;
-        private ListBox listNutritionInfo;
         private Button btnclearfilter;
+        private GroupBox NameBox;
+        private GroupBox boxIngredients;
+        private ListBox listIngredient;
+        private GroupBox boxInstructions;
+        private ListBox listBox1;
+        private GroupBox groupBox1;
+        private ListBox listNutritionInfo;
+        private TextBox txtDescription;
     }
 }

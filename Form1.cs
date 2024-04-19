@@ -22,7 +22,7 @@ namespace listboxtest
             InitializeComponent();
             generatecontent();
             comboBox1.Text = "Showing all options";
-            
+
         }
 
         private void generatecontent()
@@ -72,9 +72,9 @@ namespace listboxtest
                 {
                     if (newitem.Equals(meals[i].Name))
                     {
-                        lblName.Text = meals[i].Name;
+                        NameBox.Text = meals[i].Name;
                         txtDescription.Text = meals[i].Description;
-                        listIngredient.Items.Add(" "+meals[i].Ingredient1);
+                        listIngredient.Items.Add(" " + meals[i].Ingredient1);
                         listIngredient.Items.Add(meals[i].Ingredient2);
                         listIngredient.Items.Add(meals[i].Ingredient3);
                         listIngredient.Items.Add(meals[i].Ingredient4);
@@ -123,24 +123,13 @@ namespace listboxtest
 
         }
 
-
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnclearfilter_Click(object sender, EventArgs e)
         {
             listSelection.Items.Clear();
             comboBox1.Text = "Showing all options";
             generatecontent();
         }
+
     }
 }
 
