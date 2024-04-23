@@ -47,9 +47,6 @@ namespace listboxtest
                         }
 
                         listSelection.Items.Add(record.Name);
-
-
-
                     }
                 }
             }
