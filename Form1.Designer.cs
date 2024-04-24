@@ -37,7 +37,7 @@
             boxIngredients = new GroupBox();
             listIngredient = new ListBox();
             boxInstructions = new GroupBox();
-            listPreparation = new ListBox();
+            txtPreparation = new TextBox();
             groupBox1 = new GroupBox();
             listNutritionInfo = new ListBox();
             button1 = new Button();
@@ -142,7 +142,7 @@
             // 
             // boxInstructions
             // 
-            boxInstructions.Controls.Add(listPreparation);
+            boxInstructions.Controls.Add(txtPreparation);
             boxInstructions.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             boxInstructions.Location = new Point(675, 10);
             boxInstructions.Name = "boxInstructions";
@@ -151,18 +151,16 @@
             boxInstructions.TabStop = false;
             boxInstructions.Text = "Preparation";
             // 
-            // listPreparation
+            // txtPreparation
             // 
-            listPreparation.BackColor = SystemColors.ButtonFace;
-            listPreparation.BorderStyle = BorderStyle.None;
-            listPreparation.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listPreparation.ForeColor = SystemColors.ActiveCaptionText;
-            listPreparation.FormattingEnabled = true;
-            listPreparation.ItemHeight = 21;
-            listPreparation.Location = new Point(6, 28);
-            listPreparation.Name = "listPreparation";
-            listPreparation.Size = new Size(356, 651);
-            listPreparation.TabIndex = 12;
+            txtPreparation.BackColor = SystemColors.Control;
+            txtPreparation.BorderStyle = BorderStyle.None;
+            txtPreparation.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPreparation.Location = new Point(6, 24);
+            txtPreparation.Multiline = true;
+            txtPreparation.Name = "txtPreparation";
+            txtPreparation.Size = new Size(356, 674);
+            txtPreparation.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -219,6 +217,7 @@
             NameBox.PerformLayout();
             boxIngredients.ResumeLayout(false);
             boxInstructions.ResumeLayout(false);
+            boxInstructions.PerformLayout();
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -233,10 +232,10 @@
         private GroupBox boxIngredients;
         private ListBox listIngredient;
         private GroupBox boxInstructions;
-        private ListBox listPreparation;
         private GroupBox groupBox1;
         private ListBox listNutritionInfo;
         private TextBox txtDescription;
         private Button button1;
+        private TextBox txtPreparation;
     }
 }

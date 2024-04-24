@@ -27,7 +27,7 @@ namespace listboxtest
 
         private void generatecontent()
         {
-            using (StreamReader inputfile = new StreamReader(@"meal.csv"))
+            using (StreamReader inputfile = new StreamReader(@"meals100.csv"))
             {
                 var config = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
@@ -62,6 +62,7 @@ namespace listboxtest
                 var newitem = listSelection.SelectedItem;
                 listIngredient.Items.Clear();
                 listNutritionInfo.Items.Clear();
+                txtPreparation.Clear();
 
 
 
@@ -71,7 +72,7 @@ namespace listboxtest
                     {
                         NameBox.Text = meals[i].Name;
                         txtDescription.Text = meals[i].Description;
-                        listPreparation.Items.Add(meals[i].Preparation);
+                        txtPreparation.Text = meals[i].Preparation;
                         listIngredient.Items.Add(meals[i].Ingredient1);
                         listIngredient.Items.Add(meals[i].Ingredient2);
                         listIngredient.Items.Add(meals[i].Ingredient3);
@@ -87,10 +88,8 @@ namespace listboxtest
                         listNutritionInfo.Items.Add("Fat:\t" + meals[i].Fat);
                         listNutritionInfo.Items.Add("Carbs:\t" + meals[i].Carbs);
                         listNutritionInfo.Items.Add("Protein:\t" + meals[i].Protein);
-
-
+                        
                         string path = meals[i].Image;
-
                         //pictureBox1.Image = Image.FromFile(path);
                         pictureBox1.Load(path);
                     }
