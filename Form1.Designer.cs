@@ -37,7 +37,7 @@
             boxIngredients = new GroupBox();
             listIngredient = new ListBox();
             boxInstructions = new GroupBox();
-            listBox1 = new ListBox();
+            listPreparation = new ListBox();
             groupBox1 = new GroupBox();
             listNutritionInfo = new ListBox();
             button1 = new Button();
@@ -142,27 +142,27 @@
             // 
             // boxInstructions
             // 
-            boxInstructions.Controls.Add(listBox1);
+            boxInstructions.Controls.Add(listPreparation);
             boxInstructions.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             boxInstructions.Location = new Point(675, 10);
             boxInstructions.Name = "boxInstructions";
             boxInstructions.Size = new Size(368, 709);
             boxInstructions.TabIndex = 13;
             boxInstructions.TabStop = false;
-            boxInstructions.Text = "Instructions";
+            boxInstructions.Text = "Preparation";
             // 
-            // listBox1
+            // listPreparation
             // 
-            listBox1.BackColor = SystemColors.ButtonFace;
-            listBox1.BorderStyle = BorderStyle.None;
-            listBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listBox1.ForeColor = SystemColors.ActiveCaptionText;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 21;
-            listBox1.Location = new Point(6, 28);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(356, 651);
-            listBox1.TabIndex = 12;
+            listPreparation.BackColor = SystemColors.ButtonFace;
+            listPreparation.BorderStyle = BorderStyle.None;
+            listPreparation.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listPreparation.ForeColor = SystemColors.ActiveCaptionText;
+            listPreparation.FormattingEnabled = true;
+            listPreparation.ItemHeight = 21;
+            listPreparation.Location = new Point(6, 28);
+            listPreparation.Name = "listPreparation";
+            listPreparation.Size = new Size(356, 651);
+            listPreparation.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -233,7 +233,7 @@
         private GroupBox boxIngredients;
         private ListBox listIngredient;
         private GroupBox boxInstructions;
-        private ListBox listBox1;
+        private ListBox listPreparation;
         private GroupBox groupBox1;
         private ListBox listNutritionInfo;
         private TextBox txtDescription;

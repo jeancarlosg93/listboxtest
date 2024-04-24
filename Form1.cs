@@ -71,7 +71,8 @@ namespace listboxtest
                     {
                         NameBox.Text = meals[i].Name;
                         txtDescription.Text = meals[i].Description;
-                        listIngredient.Items.Add(" " + meals[i].Ingredient1);
+                        listPreparation.Items.Add(meals[i].Preparation);
+                        listIngredient.Items.Add(meals[i].Ingredient1);
                         listIngredient.Items.Add(meals[i].Ingredient2);
                         listIngredient.Items.Add(meals[i].Ingredient3);
                         listIngredient.Items.Add(meals[i].Ingredient4);
@@ -80,7 +81,8 @@ namespace listboxtest
                         listIngredient.Items.Add(meals[i].Ingredient7);
                         listIngredient.Items.Add(meals[i].Ingredient8);
                         listIngredient.Items.Add(meals[i].Ingredient9);
-
+                        listIngredient.Items.Add(meals[i].Ingredient10);
+                        listIngredient.Items.Add(meals[i].Ingredient11);
                         listNutritionInfo.Items.Add("Calories:\t" + meals[i].Calories);
                         listNutritionInfo.Items.Add("Fat:\t" + meals[i].Fat);
                         listNutritionInfo.Items.Add("Carbs:\t" + meals[i].Carbs);
