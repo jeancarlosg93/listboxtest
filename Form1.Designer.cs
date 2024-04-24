@@ -73,9 +73,9 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ActiveBorder;
-            pictureBox1.Location = new Point(1049, 20);
+            pictureBox1.Location = new Point(987, 20);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(224, 224);
+            pictureBox1.Size = new Size(300, 272);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -146,7 +146,7 @@
             boxInstructions.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             boxInstructions.Location = new Point(675, 10);
             boxInstructions.Name = "boxInstructions";
-            boxInstructions.Size = new Size(368, 709);
+            boxInstructions.Size = new Size(306, 709);
             boxInstructions.TabIndex = 13;
             boxInstructions.TabStop = false;
             boxInstructions.Text = "Preparation";
@@ -159,16 +159,16 @@
             txtPreparation.Location = new Point(6, 24);
             txtPreparation.Multiline = true;
             txtPreparation.Name = "txtPreparation";
-            txtPreparation.Size = new Size(356, 674);
+            txtPreparation.Size = new Size(294, 674);
             txtPreparation.TabIndex = 0;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(listNutritionInfo);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(1049, 262);
+            groupBox1.Location = new Point(988, 298);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(224, 157);
+            groupBox1.Size = new Size(299, 157);
             groupBox1.TabIndex = 14;
             groupBox1.TabStop = false;
             groupBox1.Text = "Food Facts";
@@ -183,15 +183,15 @@
             listNutritionInfo.ItemHeight = 21;
             listNutritionInfo.Location = new Point(6, 28);
             listNutritionInfo.Name = "listNutritionInfo";
-            listNutritionInfo.Size = new Size(212, 84);
+            listNutritionInfo.Size = new Size(287, 84);
             listNutritionInfo.TabIndex = 11;
             // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(1055, 689);
+            button1.Location = new Point(994, 689);
             button1.Name = "button1";
-            button1.Size = new Size(218, 30);
+            button1.Size = new Size(293, 30);
             button1.TabIndex = 15;
             button1.Text = "About";
             button1.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1284, 727);
+            ClientSize = new Size(1302, 727);
             Controls.Add(button1);
             Controls.Add(groupBox1);
             Controls.Add(boxInstructions);
